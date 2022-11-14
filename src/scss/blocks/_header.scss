@@ -1,0 +1,34 @@
+.header {
+    min-width: 350px;
+    font-family: "Lato", sans-serif;
+    background-color: rgba(16, 16, 29, 0.9);
+    position: fixed;
+    top: 0;
+    width: calc(100%);
+    z-index: 10;
+    @media (min-width: $tablet-width) {
+        padding: 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1170px;
+        margin: 0 auto;
+        min-height: 50px;
+        @media (min-width: $tablet-width) {
+            min-height: 100px;
+        }
+    }
+    &__title {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 35px;
+        font-weight: 800;
+        color: $standart-white;
+        &-colored {
+            color: $range-blue;
+        }
+    }
+}

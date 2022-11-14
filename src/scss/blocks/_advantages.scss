@@ -1,0 +1,40 @@
+.advantages {
+    max-width: 300px;
+    @media (min-width: $tablet-width) {
+        width: 534px;
+        max-width: none;
+    }
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        @media (min-width: $tablet-width) {
+            margin-top: 10px;
+        }
+    }
+    &__item {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        padding-left: 26px;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            top: calc(10px);
+            left: 10px;
+            width: 5px;
+            height: 1.5px;
+            background-color: $standart-black;
+        }
+        @media (min-width: $tablet-width) {
+            padding-left: 26px;
+            font-size: 20px;
+            line-height: 24px;
+            &:before {
+                top: calc(12px);
+            }
+        }
+    }
+}

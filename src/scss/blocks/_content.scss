@@ -1,0 +1,45 @@
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title-wrapper {
+        margin-top: 40px;
+        @media (min-width: $tablet-width) {
+            margin-top: 40px;
+        }
+        @media (min-width: $desktop-width) {
+            margin-top: 120px;
+        }
+    }
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 30px;
+        font-style: normal;
+        font-weight: 700;
+        span {
+            color: $standart-blue;
+        }
+        @media (min-width: $tablet-width) {
+            font-size: 36px;
+            line-height: 43px;
+        }
+    }
+    &__desc {
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $special-gray;
+        text-align: center;
+        @media (min-width: $tablet-width) {
+            text-align: left;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}

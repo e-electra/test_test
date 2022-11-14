@@ -1,0 +1,12 @@
+.main {
+    min-width: 320px;
+    background-image: url(../img/main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $special-black;
+
+    @media (min-width: $tablet-width) {
+        width: 100%;
+    }
+}

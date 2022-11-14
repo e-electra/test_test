@@ -1,0 +1,66 @@
+.promotion {
+    min-width: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/promo-bg.jpg);
+    color: $standart-black;
+    @media (min-width: $tablet-width) {
+        background-size: cover;
+    }
+    &__wrapper {
+        margin-bottom: 80px;
+        margin-top: 80px;
+        @media (min-width: $tablet-width) {
+            margin-bottom: 202px;
+            margin-top: 203px;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        color: $standart-blue;
+        font-size: 24px;
+        line-height: 30px;
+        max-width: 700px;
+        @media (min-width: $tablet-width) {
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 700;
+            max-width: 780px;
+        }
+        &-colored {
+            color: $standart-black;
+            font-family: "Raleway", sans-serif;
+            font-weight: 800;
+            @media (min-width: $tablet-width) {
+                font-weight: 800;
+            }
+        }
+    }
+    &__sub-title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        margin-top: 24px;
+        @media (min-width: $tablet-width) {
+            margin-top: 86px;
+            font-family: "Lato";
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+        }
+    }
+    &__button-wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        @media (min-width: $tablet-width) {
+            max-width: none;
+            width: 396px;
+            gap: 30px;
+            margin-top: 76px;
+        }
+    }
+}

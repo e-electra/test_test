@@ -1,0 +1,60 @@
+.range-bar {
+    &__desc-wrapper {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        @media (min-width: $tablet-width) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__value-desc {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+
+    &__value-data {
+        white-space: nowrap;
+    }
+    &__input {
+        height: 37px;
+        margin-top: 21px;
+        width: calc(100%);
+        opacity: 0.7;
+        transition: opacity 200ms;
+        outline: none;
+        -webkit-appearance: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        height: 8px;
+        border: 1px solid $standart-white;
+        border-radius: 3px;
+        &:hover {
+            opacity: 1;
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 25px;
+            height: 25px;
+            background: $range-blue;
+            border: 3px solid $special-blue;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: $range-blue;
+            border: 3px solid $special-blue;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}

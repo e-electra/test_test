@@ -1,0 +1,21 @@
+.copyrights {
+    min-width: 320px;
+    cursor: default;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+        padding-right: 25px;
+        max-width: 200px;
+    }
+    @media (min-width: $desktop-width) {
+        max-width: none;
+
+        min-width: none;
+        width: 346px;
+
+        padding-right: 35px;
+    }
+}

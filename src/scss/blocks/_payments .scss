@@ -1,0 +1,93 @@
+.payments {
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $special-white;
+    border-top: 1px solid $special-white;
+    border-bottom: 1px solid $special-white;
+
+    @media (min-width: $tablet-width) {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+        border-left: 2px solid $special-white;
+        border-right: 2px solid $special-white;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+
+        @media (min-width: $tablet-width) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 30px;
+            width: 100%;
+            padding: 0 25px;
+        }
+
+        @media (min-width: $desktop-width) {
+            column-gap: 30px;
+            justify-content: space-between;
+            padding: 0 38px;
+        }
+    }
+
+    &__item {
+        display: block;
+        padding-left: 30px;
+        white-space: nowrap;
+        position: relative;
+        cursor: default;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+        @media (min-width: $tablet-width) {
+            padding-left: 30px;
+            white-space: nowrap;
+            position: relative;
+            cursor: default;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: calc(50% - 10px);
+                left: 0;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        &--qiwi {
+            &::before {
+                background-image: url(../img/icons/icon-payments-qiwi.svg);
+            }
+        }
+        &--ym {
+            &::before {
+                background-image: url(../img/icons/icon-payments-ym.svg);
+            }
+        }
+        &--wm {
+            &::before {
+                background-image: url(../img/icons/icon-payments-wm.svg);
+            }
+        }
+    }
+}

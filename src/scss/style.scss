@@ -1,0 +1,33 @@
+@mixin font-face($font-family, $url, $weight) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: url("../fonts/#{$url}.woff2") format("woff2"), url("../#{$url}.woff") format("woff");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+// @import "./_fonts.scss";
+
+@import "fonts";
+
+@import "./global/_global.scss";
+@import "./global/_reset.scss";
+
+@import "./blocks/_header.scss";
+@import "./blocks/_navigation.scss";
+@import "./blocks/_promotion.scss";
+@import "./blocks/_advantages.scss";
+
+@import "./blocks/_main.scss";
+@import "./blocks/_content.scss";
+@import "./blocks/_order-steps.scss";
+@import "./blocks/_order-form.scss";
+@import "./blocks/_system-select.scss";
+@import "./blocks/_range-bar.scss";
+
+@import "./blocks/_footer.scss";
+@import "./blocks/_copyrights.scss";
+@import "./blocks/_contacts.scss";
+@import "./blocks/_payments .scss";

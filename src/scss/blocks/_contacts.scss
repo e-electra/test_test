@@ -1,0 +1,82 @@
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet-width) {
+        gap: 10px;
+        border-right: none;
+        padding-left: 25px;
+        max-width: 200px;
+        justify-content: flex-end;
+    }
+
+    @media (min-width: $desktop-width) {
+        max-width: none;
+        width: 340px;
+        padding-left: 35px;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    &__link {
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            transition: $transition-basic;
+        }
+        &:hover {
+            transition: $transition-basic;
+            color: $light-blue;
+        }
+        &:focus {
+            transition: $transition-basic;
+            color: $light-blue;
+        }
+        &:focus-within {
+            transition: $transition-basic;
+            color: $light-blue;
+        }
+        @media (min-width: $tablet-width) {
+            padding-left: 30px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: calc(50% - 10px);
+                left: 0;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        &--vk {
+            margin-left: 0;
+            &::before {
+                background-image: url(../img/icons/icon-contacts-vk.svg);
+            }
+        }
+        &--mail {
+            @media (min-width: $tablet-width) {
+            }
+            &::before {
+                background-image: url(../img/icons/icon-contacts-mail.svg);
+            }
+        }
+    }
+}

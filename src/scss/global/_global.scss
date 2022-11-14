@@ -1,0 +1,112 @@
+$tablet-width: 768px;
+$desktop-width: 1140px;
+$transition-basic: all 200ms;
+$standart-white: #ffffff;
+$special-white: #c3c3c3;
+$special-black: #272733;
+$standart-black: #000000;
+$light-black: #3d4050;
+$standart-gray: #6f6d7b;
+$special-gray: #bbbbbb;
+$standart-blue: #3e9cdc;
+$special-blue: #286690;
+$light-blue: #3e9cdc;
+$range-blue: #42a9ed;
+
+$error-red: red;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    min-width: 320px;
+    line-height: normal;
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    color: $standart-white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    min-height: 100vh;
+
+    @media (min-width: $tablet-width) {
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.basic-button {
+    width: auto;
+    padding: 10px 15px;
+    background-color: $standart-white;
+    color: $standart-gray;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid $standart-gray;
+    transition: $transition-basic;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    &:hover {
+        transition: $transition-basic;
+        opacity: 0.85;
+    }
+    &:focus {
+        transition: $transition-basic;
+        border-color: $special-black;
+    }
+    &:focus-within {
+        transition: $transition-basic;
+        border-color: $special-black;
+    }
+    &--blue {
+        background-color: $standart-blue;
+        color: $standart-white;
+        border: 1px solid $standart-white;
+        &:hover {
+            transition: $transition-basic;
+            opacity: 0.8;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        padding: 15px 30px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.visually-hidden {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.container {
+    padding: 0 15px;
+    @media (min-width: $tablet-width) {
+        padding: 20px;
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

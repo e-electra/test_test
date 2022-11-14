@@ -1,0 +1,74 @@
+main.main
+  section.main__section.content.container
+    .content__title-wrapper
+      h2.content__title Оформление #[span Заказа] 
+      p.content__desc Перед заполнением формы ознакомьтесь с нашей схемой работы!
+    
+    .content__order-steps.order-steps
+      ul.order-steps__list 
+        li.order-steps__item
+          .order-steps__icon-wrapper.order-steps__icon-wrapper 
+            img(src="./img/icons/icon-search.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
+          p.order-steps__item-desc Lorem ipsum dolor sit amet
+        li.order-steps__item
+          .order-steps__icon-wrapper 
+            img(src="./img/icons/icon-discount.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
+          p.order-steps__item-desc Сonsecteturadipiscing elit
+        li.order-steps__item 
+          .order-steps__icon-wrapper
+            img(src="./img/icons/icon-add.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
+          p.order-steps__item-desc Sed do eiusmod tempor
+        li.order-steps__item
+          .order-steps__icon-wrapper
+            img(src="./img/icons/icon-mail.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
+          p.order-steps__item-desc Esse cillum doloreeu fugiat
+        li.order-steps__item
+          .order-steps__icon-wrapper
+            img(src="./img/icons/icon-pay.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
+          p.order-steps__item-desc Excepteur sint occaecat cupidatat non proident
+    form.content__order.order-form(action="url" onsubmit="return sendform()" id="order-form")
+      .order-form__system-select
+        label().order-form__label.order-form__label--system
+          input(type="text" name="systemtype" placeholder="Выберите тип системы" readonly="readonly" ).order-form__input.order-form__input--system
+          span.order-form__input-icon
+        .order-form__select-wrapper
+          ul.order-form__select-list.system-select
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Sed ut perspiciatis").system-select__radio-input
+                span.system-select__desc Sed ut perspiciatis
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Nemo enim ipsam").system-select__radio-input
+                span.system-select__desc Nemo enim ipsam
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Et harum quidem").system-select__radio-input
+                span.system-select__desc Et harum quidem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Temporibus autem").system-select__radio-input
+                span.system-select__desc Temporibus autem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Itaque earum rerum").system-select__radio-input
+                span.system-select__desc Itaque earum rerum
+
+      label().order-form__label.order-form__label--email 
+        input.order-form__input.order-form__input--mail(type="email" name="email" placeholder="Ваш e-mail" maxlength="50")
+      label().order-form__label.order-form__label--name 
+        input.order-form__input.order-form__input--name(type="text" name="name" placeholder="Ваше имя" maxlength="50")
+      label().order-form__label.order-form__label--file
+        input.order-form__input.order-form__input--file(type="file" name="file")
+        span.order-form__input-title Прикрепить файл
+        span.order-form__input-file-name 
+        a(href="#").order-form__input-file-delete
+
+
+      .order-form__range-bar.range-bar
+        .range-bar__desc-wrapper
+          p.range-bar__value-desc Sed ut perspiciatis, unde omnis iste natus
+          p.range-bar__value-data 75 %
+        input.range-bar__input(type="range" name="range-value" min="0" max="100" value="75")
+
+      button.basic-button.basic-button--blue.order-form__submit(type="submit" ) Отправить

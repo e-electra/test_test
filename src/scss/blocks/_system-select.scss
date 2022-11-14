@@ -1,0 +1,42 @@
+.system-select {
+    max-height: 195px;
+    overflow-y: auto;
+
+    scrollbar-color: $standart-blue transparent;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar-thumb {
+        width: 7px;
+        background: $standart-blue;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar {
+        width: 7px;
+        background: $light-black;
+        border-radius: 4px;
+    }
+    @media (min-width: $tablet-width) {
+        max-height: 160px;
+    }
+    &__label {
+        cursor: pointer;
+    }
+    &__radio-input {
+        visibility: hidden;
+        display: none;
+        &:checked + .system-select__desc {
+            color: $range-blue;
+        }
+    }
+    &__desc {
+        display: block;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        padding: 10px 0;
+        @media (min-width: $tablet-width) {
+            padding: 0;
+            font-size: 18px;
+            line-height: 34px;
+        }
+    }
+}
